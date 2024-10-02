@@ -11,11 +11,11 @@ picam2.preview_configuration.align()
 picam2.configure("preview")
 picam2.start()
 # Load COCO class names
-with open("coco1.txt", "r") as f:
+with open("coco.txt", "r") as f:
     class_names = f.read().splitlines()
 
 # Load the YOLOv8 model
-model = YOLO("best.pt")
+model = YOLO("yolo11n-seg.pt")
 
 # Open the video file (use video file or webcam, here using webcam)
 cap = cv2.VideoCapture(0)
