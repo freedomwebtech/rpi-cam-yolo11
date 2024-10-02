@@ -16,6 +16,7 @@ while cpt < maxFrames:
     cv2.imshow("Camera", im)
     cv2.imwrite('/home/pi/images/img_%d.jpg' %cpt, im)
     cpt += 1
+    time.sleep(0.01)
     if cv2.waitKey(1)==ord('q'):
         break
 cv2.destroyAllWindows()
